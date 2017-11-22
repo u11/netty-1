@@ -60,12 +60,12 @@ public class FileUploadClient {
 		}
 		try {
 			FileUploadFile uploadFile = new FileUploadFile();
-			File file = new File("d:/source.rar");// d:/source.rar,D:/2014work/apache-maven-3.5.0-bin.tar.gz
+			File file = new File("C:/TDDownload/0.5.1.zip");// d:/source.rar,D:/2014work/apache-maven-3.5.0-bin.tar.gz
 			String fileMd5 = file.getName();// 文件名
 			uploadFile.setFile(file);
 			uploadFile.setFile_md5(fileMd5);
 			uploadFile.setStarPos(0);// 文件开始位置
-			new FileUploadClient().connect(port, "127.0.0.1", uploadFile);
+			new FileUploadClient().connect(8080, "192.168.31.183", uploadFile);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
